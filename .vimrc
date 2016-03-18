@@ -1,10 +1,5 @@
-" ===========================================================================
-" For VIM
-" ===========================================================================
-
-
 " ====== 插件管理 ======
-call pathogen#infect()
+execute pathogen#infect()
 
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
@@ -13,10 +8,10 @@ inoremap <C-k> <Up>
 imap jj <esc>
 
 " ====== 基本设置 ======
-set ts=4
-set expandtab
-set shiftwidth=4
+set tabstop=4
 set softtabstop=4
+set shiftwidth=4
+set expandtab
 
 " 高亮显示搜索结果
 set hlsearch
@@ -187,7 +182,6 @@ endfunction
 " Find trailing whitespace
 highlight ExtraWhitespace ctermbg=yellow guibg=yellow
 match ExtraWhitespace '\s\+$'
-
 
 " Defind command to trim trailing whitespace
 command RTW :%s/\s\+$//e
